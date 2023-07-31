@@ -60,14 +60,42 @@ export default function Dashboard() {
     fileInputRef.current.click()
   }
 
-  const handleFileInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleFileInputChange = async (
+    event: ChangeEvent<HTMLInputElement>,
+  ) => {
     // Aqui você pode acessar o arquivo selecionado pelo usuário através do 'files' do input file
     if (event.target.files === null) return
 
     const selectedFile = event.target.files[0]
 
-    if (selectedFile) {
-      console.log('Arquivo selecionado:', selectedFile.name)
+    if (selectedFile.type !== 'application/pdf')
+      return toast.error('O arquivo precisa ser um PDF')
+
+    try {
+      const formData = new FormData()
+      formData.append('file', selectedFile)
+
+      const response = await toast.promise(
+        fetch(`http://${process.env.NEXT_PUBLIC_API_URL}/fatura/upload`, {
+          method: 'post',
+          body: formData,
+        }),
+        {
+          pending: 'Fazendo upload...',
+          error: 'Aconteceu algum erro no servidor.',
+        },
+      )
+
+      if (response.status === 400) {
+        const { mensagem } = await response.json()
+        toast.error(mensagem)
+        return
+      }
+
+      toast.success('Fatura cadastrada com sucesso!')
+      getDashboard()
+    } catch (err) {
+      console.error(err)
     }
   }
 
