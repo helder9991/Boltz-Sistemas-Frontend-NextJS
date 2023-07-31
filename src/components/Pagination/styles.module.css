@@ -1,0 +1,19 @@
+.container {
+  height: 80px;
+  width: 80vw;
+  max-width: 1000px;
+  margin-bottom: 25px;
+  border-top: 1px solid #C0C0C0;
+}
+
+.pageNumber {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+}
+
+.pageNumberSelected {
+  background-color: #6B96EA;
+  color: #FFF;
+  text-decoration: underline;
+}

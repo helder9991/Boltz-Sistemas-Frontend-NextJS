@@ -23,7 +23,7 @@ export default function RootLayout({
       <body>
         <ToastContainer />
         <SideBar />
-        <div className="flex px-10 pt-10 flex-1 items-center justify-center overflow-y-auto">
+        <div className={`flex flex-1 justify-center overflow-y-auto`}>
           {children}
         </div>
       </body>

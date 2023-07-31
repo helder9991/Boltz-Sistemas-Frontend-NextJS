@@ -14,12 +14,12 @@ export default function PieChart({
     {
       id: 'Energ. Eletrica',
       label: 'Energia Elétrica',
-      value: energiaEletrica.toFixed(2),
+      value: energiaEletrica ? energiaEletrica.toFixed(2) : 0,
     },
     {
       id: 'Contrib Ilum Publica',
       label: 'Contrib Ilum Pública',
-      value: contribIlumPublica.toFixed(2),
+      value: contribIlumPublica ? contribIlumPublica.toFixed(2) : 0,
     },
   ]
 
