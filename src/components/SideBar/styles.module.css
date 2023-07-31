@@ -21,7 +21,7 @@
   display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   .container {
     height: 80px !important;
     width: 100vw;
