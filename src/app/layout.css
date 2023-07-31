@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+html,
+body,
+ul {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #F1F1F4;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  height: 100%;
+
+  font-family: 'Roboto';
+}
+
+@media (max-width: 768px) {
+  body {
+    flex-direction: column;
+  }
+}
