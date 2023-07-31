@@ -1,0 +1,57 @@
+.container {
+  color: #515151;
+  max-height: 700px;
+  max-width: 1400px;
+}
+
+.cardsRow {
+  height: 182px;
+}
+
+.graphsRow {
+  height: 420px;
+}
+
+.barChart, .pieChart {
+  background-color: #FFF;
+  box-shadow: 3px 4px 2px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+
+.pieChart {
+  width: 35%;
+}
+
+.barChart {
+  width: 60%;
+}
+
+@media (max-width: 1480px) {
+  .container {
+    max-height: none;
+  }
+
+  .cardsRow {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .graphsRow {
+    margin-top: 20px;
+    height: auto;
+  }
+}
+
+@media (max-width: 1100px) {
+  .graphsRow {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .graphsRow > div {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}

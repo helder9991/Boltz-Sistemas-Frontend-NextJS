@@ -1,8 +1,10 @@
 import type { Metadata } from 'next'
+import { ToastContainer } from 'react-toastify'
 
 // These styles apply to every route in the application
 import './layout.css'
 import './globals.css'
+import 'react-toastify/dist/ReactToastify.css'
 
 import SideBar from '../components/SideBar'
 
@@ -18,9 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full">
-      <body className="min-h-screen">
+      <body>
+        <ToastContainer />
         <SideBar />
-        {children}
+        <div className="flex px-10 pt-10 flex-1 items-center justify-center overflow-y-auto">
+          {children}
+        </div>
       </body>
     </html>
   )

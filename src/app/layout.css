@@ -10,7 +10,7 @@ ul {
 
 html {
   background-color: #F1F1F4;
-  height: 100vh;
+  height: 100%;
 }
 
 body {
@@ -20,7 +20,7 @@ body {
   font-family: 'Roboto';
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1100px) {
   body {
     flex-direction: column;
   }
