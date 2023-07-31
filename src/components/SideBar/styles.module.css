@@ -1,0 +1,55 @@
+.container {
+  width: 185px;
+  background-color: #78C86B;
+}
+
+.logoContainer {
+  display: flex;
+  height: 25vh;
+}
+
+.containerSeparator {
+  width: 90%;
+  border-color: rgba(236, 236, 236, 0.61);
+}
+
+.navContainer {
+  margin: 20% 0;
+}
+
+.menuContainer {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 80px !important;
+    width: 100vw;
+    background-color: #78C86B;
+
+    display: flex;
+  }
+
+  .logoContainer {
+    height: 100%;
+    margin-left: 25px;
+  }
+
+  .containerSeparator {
+    display: none !important;
+  }
+
+  .navContainer {
+    display: none !important;
+  }
+
+  .menuContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+
+    background: none;
+    border: none;
+  }
+}
