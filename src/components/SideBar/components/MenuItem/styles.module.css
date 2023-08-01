@@ -1,0 +1,21 @@
+.container {
+  list-style-type: none;
+}
+
+.linkContainer {
+
+  width: 120px;
+  height: 82px;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.linkContainerSelected {
+  border-radius: 8px;
+  background-color: #FFFFFF;
+  color: #515151;
+}
+
+.container + .container {
+  margin-top: 25px;
+}
