@@ -1,0 +1,34 @@
+.container {
+  height: 30px;
+  color: #515151;
+  width: 300px;
+}
+
+.inputContainer {
+  flex: 1;
+  background-color: #FFF;
+  filter: drop-shadow(3px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+}
+
+.separator {
+  height: 100%;
+  width: 1px;
+  border: 1px solid #9a9a9a8a;
+}
+
+.container input {
+  height: 20px;
+}
+
+.container input:focus {
+  border-bottom: 1px solid #9a9a9a8a;
+  outline: none;
+}
+
+
+.inputContainer input[type="month"]::-webkit-inner-spin-button,
+.inputContainer input[type="month"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}

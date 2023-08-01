@@ -101,7 +101,7 @@ export default function Dashboard() {
 
   return (
     <div
-      className={`h-full flex-1 flex flex-col justify-between ${styles.container}`}
+      className={`h-full flex-1 flex flex-col justify-between px-10 pt-10 ${styles.container}`}
     >
       <div className="flex justify-end items-end mr-10">
         <button className="flex items-end" onClick={handleUploadFileInput}>
